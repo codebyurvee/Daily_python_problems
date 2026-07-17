@@ -67,12 +67,44 @@ r1=Rectangle(2,4)
 r1.area()
 r1.perimeter()
 
-#problem no.  4 Employee
+# Problem 4: Employee Salary
+
 class Employee:
-    def __init__(self,name,salary):
-        self.name= name
-        self.salary= salary
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
     def display(self):
-        print("Employee's Name: ",name)
-        print("Employee's Salaary: ",salary)
-        
+        print("Employee Name:", self.name)
+        print("Employee Salary:", self.salary)
+
+    def increase_salary(self, percent):
+        increase = self.salary * percent / 100
+        self.salary += increase
+        print("Salary increased successfully!")
+
+
+# Create Object
+e1 = Employee("Esha", 40000)
+
+# Display Details
+e1.display()
+
+# Increase Salary by 10%
+e1.increase_salary(10)
+
+# Display Updated Details
+e1.display()
+
+#problem no.5 Library Book
+class Book:
+    def __init__(self,title,author,available = True):
+        self.title = title
+        self.author = author
+        self.available = available
+    def show(self):
+        print("Title of the book: ",self.title)
+        print("Author of the book: ",self.author)
+        print("The book is Available in our library")
+b1 = Book("hey","esha")
+b1.show()
